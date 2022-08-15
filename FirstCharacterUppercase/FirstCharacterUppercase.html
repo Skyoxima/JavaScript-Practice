@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Check First Character Case</title>
+        <link rel="stylesheet" href="FirstCharacterUppercase.css">
+    </head>
+    
+    <body>
+        <div id="main-div">
+            <div id="heading" style="justify-content: center; font-size: 20px; text-decoration: 2px solid white underline; text-underline-offset: 4px;"><h2>Check Case of First Character</h2></div>
+
+            <div>
+                <label for="stringbox">String</label>
+                <input type="text" name="stringbox" id="stringbox" oninput="this.value = this.value.replace(/[^a-zA-Z]/g, '')"> <!-- nothing other than alphabets allowed -->
+            </div>
+            <div id="errormessage"></div>
+
+            <div>
+                <label>Status</label>
+                <label id="answerbox"></label>
+            </div>
+
+            <div style="justify-content: center;">
+                <input type="button" value="Evaluate" id="evaluationbutton">
+            </div>
+            
+        </div>
+        <script src="FirstCharacterUppercase.js"></script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, red, blue);
+    font-family: Segoe Print;
+    font-size: 18px;
+    font-weight: 600;
+    color: azure;
+}
+
+#main-div
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid yellow;
+    background: linear-gradient(to top right, maroon, darkslateblue);
+    box-shadow: 2px 2px 5px 2px white;
+}
+
+#main-div div
+{
+    display: flex;
+    justify-content: space-between; /* as flex-direction by default is row, justify content is aligning stuff along main axis i.e X axis 
+                                       and align items is aligning stuff vertically i.e on Y-axis */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.textbox
+{
+    height: 20px;
+    width: 200px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid snow;
+    color: snow;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Segoe Print;
+    transition: .3s;
+}
+
+.textbox:focus
+{
+    border-bottom: 2px solid orange;
+}
+
+label
+{
+    margin-right: 25px;
+}
+
+#submitbutton
+{
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to top left, maroon, slateblue);
+    box-shadow: 5px 5px 5px 0.35px slateblue;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Segoe Print;
+    color: azure; 
+    transition: .2s;
+}
+
+#submitbutton:active
+{
+    box-shadow: 5px 5px 5px 0.35px chartreuse;
+}
+
+.textbox.error
+{
+    border-bottom: 2px solid red;
+}
+
+.textbox.success
+{
+    border-bottom: 2px solid chartreuse;
+}
+
+.errormessage
+{
+    justify-content: end !important;
+    margin-top: -20px;      /* to counterract each division inside main-div getting a 25px bottom margin */
+    font-size: 12px;
+    font-family: Segoe UI;
+    color: red;
+}
+
+/* CSS Specificity: Start at 0, add 100 for each ID value, add 10 for each class value (or pseudo-class or attribute selector), add 1 for each element selector or pseudo-element. */

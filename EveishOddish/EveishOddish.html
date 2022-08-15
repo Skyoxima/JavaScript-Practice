@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EvenishOddish</title>
+        <link rel="stylesheet" href="EveishOddish.css">
+    </head>
+
+    <body>
+        <div id="main-div">
+            <div style="justify-content: center;">
+                <h2>Find Evenish-Oddish</h2>
+            </div>
+
+            <div>
+                <label for="numberbox">Number</label>
+                <input type="text" name="numberbox" id="numberbox" oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>  <!-- restrict to only numeric inputs, also takes care of space -->
+            </div>
+            
+            <div>
+                <label for="statusbox">Status</label>
+                <input type="text" name="statusbox" id="statusbox" oninput="this.value = this.value.replace(/./g, '')">        <!-- restriction to any input -->
+            </div>
+
+            <div style="justify-content: center;">
+                <input type="button" value="Evaluate" id="evaluationbutton">
+            </div>
+        </div>
+        <script src="EveishOddish.js"></script>
+    </body>
+</html>

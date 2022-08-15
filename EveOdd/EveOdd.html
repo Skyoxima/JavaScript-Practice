@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EvenOdd Filter</title>
+
+        <link rel="stylesheet" href="EveOdd.css">
+    </head>
+    
+    <body>
+        <div id="main-div">
+            <div id="input-div">
+                <label for="inputstring">Enter List</label>
+                <input type="text" id="inputstring" name="inputstring">
+            </div>
+
+            <div id="button-div">
+                <input type="button" value="Even Nos" onclick="masterfilter('evenfilter')">
+                <input type="button" value="Odd Nos" onclick="masterfilter('oddfilter')">
+            </div>
+
+            <div id="output-div">
+                <textarea name="outputbox" id="outputbox" cols="30" rows="10"></textarea>
+            </div>
+        </div>        
+    
+    <script type="text/javascript">
+        function masterfilter(button_id)
+        {
+            var arr = document.getElementById('inputstring').value;
+            arr = arr.trim().split(" ");
+
+            if(button_id === 'evenfilter')
+                var ans = arr.filter(val => val % 2 === 0);
+            else
+                var ans = arr.filter(val => val % 2 !== 0);
+            
+            document.getElementById('outputbox').innerHTML = ans;
+        }
+
+    </script>
+    </body>
+</html>

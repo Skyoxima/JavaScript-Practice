@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI';
+    color: aliceblue;
+    background: linear-gradient(15deg, grey, black);
+}
+
+#main-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0.5px black;
+
+    color: white;
+    background-color: rgba(23, 23, 23, 0.3);
+    transition: .3s;
+}
+
+#main-div:hover {
+    background-color: rgba(23, 23, 23, .9);
+    box-shadow: 5px 5px 10px 0.5px white;
+}
+
+#main-div div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: end;
+}
+
+label {
+    margin-right: 20px;
+}
+
+input[type=button] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid yellow;
+    background-color: rgba(40, 40, 40, 0.3);
+    color: aliceblue;
+    transition: .3s;
+}
+
+input[type=button]:hover {
+    background-color: rgba(40, 40, 40, 0.7);
+    box-shadow: 0px 4px .1px 0.1px yellow
+}
+
+input[type=button]:active {
+    border: 2px solid yellow;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px .1px 2px yellow;
+}
+
+input[type=text] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: none;
+
+    border-bottom: 2px solid yellow;
+    color: white;
+    transition: .2s;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid goldenrod;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation Practice</title>
+        <link rel="stylesheet" href="FormValidation.css">
+    </head>
+
+    <body>
+        <div id="main-div">
+            <form>
+                <div id = "title" style="justify-content: center; font-family: Segoe UI; font-weight: 600; font-size: 20px;"><h3>Login</h3></div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="textbox">
+                    </div>
+                    <div class="errormessage" id="nameerror"></div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="textbox">
+                    </div>
+                    <div class="errormessage" id="emailerror"></div>
+
+                    <div>
+                        <label for="takepassword">Password</label>
+                        <input type="password" name="takepassword" id="takepassword" class="textbox">
+                    </div>
+                    <div class="errormessage" id="passworderror"></div>
+
+                    <div>
+                        <label for="confpassword">Confirm Password</label>
+                        <input type="password" name="confpassword" id="confpassword" class="textbox">
+                    </div>
+                    <div class="errormessage" id="confpassworderror"></div>
+
+                    <div style="justify-content: center; margin-top: 30px">
+                        <input type="button" role="button" value="Submit" id = "submitbutton">
+                </div>
+            </form>
+        </div>
+    <script src="FormValidation.js"></script>
+    </body>
+</html>
